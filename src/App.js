@@ -25,7 +25,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
-    <div className=" sm:px-[5vw] md:px-[7vw] lg:px-[9vw] ">
+    <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] ">
     <ToastContainer />
     <Nav />
     <SearchBar />
