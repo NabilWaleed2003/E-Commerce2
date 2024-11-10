@@ -8,8 +8,8 @@ import { ShopContexts } from '../context/ShopContext';
 
 const Nav = () => {
   const [open, setOpen] = React.useState(false);
-  
-  const { setShowSearch , cartCounts} = useContext(ShopContexts)
+
+  const { setShowSearch, cartCounts } = useContext(ShopContexts)
 
   return (
     <div className=" flex items-center justify-between py-4 font-medium">
@@ -40,11 +40,14 @@ const Nav = () => {
       </ul>
 
       <div className=" flex items-center gap-3">
-        <CiSearch onClick={()=> setShowSearch(true)} className="  text-xl font-semibold cursor-pointer w-5 " />
+        <Link to="/colliection" >
+          <CiSearch onClick={() => setShowSearch(true)} className="  text-xl font-semibold cursor-pointer w-5 " />
+        </Link>
+
 
         <div className="group relative">
           <Link to='/login'>
-          <IoPersonAddOutline className="  text-xl font-semibold cursor-pointer w-5 " /></Link>
+            <IoPersonAddOutline className="  text-xl font-semibold cursor-pointer w-5 " /></Link>
           {/* <div className="absolute top-0 right-0 hidden group-hover:block pt-4">
             <div className="bg-white shadow-md rounded-md p-4 flex flex-col gap-2 w-36">
               <p className=" text-xs cursor-pointer">Create Account</p>
@@ -52,7 +55,7 @@ const Nav = () => {
               <p className=" text-xs cursor-pointer">Login</p>
             </div>
           </div> */}
-          
+
         </div>
 
         <Link className=" relative" to="/cart">
@@ -71,9 +74,8 @@ const Nav = () => {
       </div>
 
       <div
-        className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${
-          open ? "w-full" : "w-0"
-        }`}
+        className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${open ? "w-full" : "w-0"
+          }`}
       >
         <div className="flex flex-col text-gray-600">
           <div
